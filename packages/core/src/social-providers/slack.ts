@@ -41,6 +41,7 @@ export const slack = (options: SlackOptions) => {
 	const tokenEndpoint = "https://slack.com/api/openid.connect.token";
 	return {
 		id: "slack",
+		callbackPath: "/callback/slack",
 		name: "Slack",
 		createAuthorizationURL({ state, scopes, redirectURI }) {
 			const _scopes = options.disableDefaultScope

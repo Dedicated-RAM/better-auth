@@ -36,6 +36,7 @@ export const roblox = (options: RobloxOptions) => {
 	const tokenEndpoint = "https://apis.roblox.com/oauth/v1/token";
 	return {
 		id: "roblox",
+		callbackPath: "/callback/roblox",
 		name: "Roblox",
 		createAuthorizationURL({ state, scopes, redirectURI }) {
 			const _scopes = options.disableDefaultScope ? [] : ["openid", "profile"];

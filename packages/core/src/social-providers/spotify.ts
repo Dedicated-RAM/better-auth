@@ -23,6 +23,7 @@ export const spotify = (options: SpotifyOptions) => {
 	const tokenEndpoint = "https://accounts.spotify.com/api/token";
 	return {
 		id: "spotify",
+		callbackPath: "/callback/spotify",
 		name: "Spotify",
 		createAuthorizationURL({ state, scopes, codeVerifier, redirectURI }) {
 			const _scopes = options.disableDefaultScope ? [] : ["user-read-email"];

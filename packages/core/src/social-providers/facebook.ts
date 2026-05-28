@@ -42,6 +42,7 @@ export interface FacebookOptions extends ProviderOptions<FacebookProfile> {
 export const facebook = (options: FacebookOptions) => {
 	return {
 		id: "facebook",
+		callbackPath: "/callback/facebook",
 		name: "Facebook",
 		async createAuthorizationURL({ state, scopes, redirectURI, loginHint }) {
 			if (!getPrimaryClientId(options.clientId) || !options.clientSecret) {

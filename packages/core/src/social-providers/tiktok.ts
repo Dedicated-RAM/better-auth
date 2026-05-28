@@ -130,6 +130,7 @@ export const tiktok = (options: TiktokOptions) => {
 	const tokenEndpoint = "https://open.tiktokapis.com/v2/oauth/token/";
 	return {
 		id: "tiktok",
+		callbackPath: "/callback/tiktok",
 		name: "TikTok",
 		createAuthorizationURL({ state, scopes, redirectURI }) {
 			const _scopes = options.disableDefaultScope ? [] : ["user.info.profile"];

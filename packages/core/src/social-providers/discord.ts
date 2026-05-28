@@ -83,6 +83,7 @@ export const discord = (options: DiscordOptions) => {
 	const tokenEndpoint = "https://discord.com/api/oauth2/token";
 	return {
 		id: "discord",
+		callbackPath: "/callback/discord",
 		name: "Discord",
 		createAuthorizationURL({ state, scopes, redirectURI }) {
 			const _scopes = options.disableDefaultScope ? [] : ["identify", "email"];

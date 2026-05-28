@@ -57,6 +57,7 @@ export interface WeChatOptions extends ProviderOptions<WeChatProfile> {
 export const wechat = (options: WeChatOptions) => {
 	return {
 		id: "wechat",
+		callbackPath: "/callback/wechat",
 		name: "WeChat",
 		createAuthorizationURL({ state, scopes, redirectURI }) {
 			const _scopes = options.disableDefaultScope ? [] : ["snsapi_login"];
